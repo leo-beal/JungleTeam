@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="215abe6b-1ffd-46f0-9e91-d34500f43449" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+              <folding>
+                <marker date="1583525120194" expanded="true" signature="6:78" ph="..." />
+                <marker date="1583525120194" expanded="true" signature="116:1251" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="207:1249" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="542:628" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="694:715" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="767:1122" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="870:1110" ph="{...}" />
+                <marker date="1583525120194" expanded="true" signature="1190:1243" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <folding>
+                <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
+                <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
+                <marker date="1583368126362" expanded="true" signature="303:12031" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="466:12029" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="2382:2414" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="2517:6425" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="2525:2735" ph="/* Reset transform since we cheated it right after getting poses on previous frame ... */" />
+                <marker date="1583368126362" expanded="true" signature="2778:6080" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="2993:3072" ph="/* Align bow ... */" />
+                <marker date="1583368126362" expanded="true" signature="4341:5948" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="4980:5015" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="5025:5061" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="5223:5592" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="5638:5942" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="5685:5935" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="5957:6075" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6088:6421" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6127:6416" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6358:6410" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6511:6780" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6692:6727" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6874:7231" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="6992:7169" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="7321:7354" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="7444:7611" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="7721:8105" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="8197:10097" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="8341:9190" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="8565:8610" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="8811:8898" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="9099:9185" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="9243:10093" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="9468:9513" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="9713:9800" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10001:10088" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10188:10487" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10336:10405" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10413:10483" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10575:10668" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10632:10664" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="10752:10988" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11070:11475" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11145:11471" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11243:11466" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11371:11460" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11575:11617" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11721:11791" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="11894:11928" ph="{...}" />
+                <marker date="1583368126362" expanded="true" signature="12003:12026" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BowScript.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/BowScript.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="180" />
+    <option name="y" value="45" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="SteamVR" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="SteamVR" type="1045f7f1:UnityExplorerNode" />
+              <item name="InteractionSystem" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="SteamVR" type="1045f7f1:UnityExplorerNode" />
+              <item name="InteractionSystem" type="1045f7f1:UnityExplorerNode" />
+              <item name="Longbow" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="SteamVR" type="1045f7f1:UnityExplorerNode" />
+              <item name="InteractionSystem" type="1045f7f1:UnityExplorerNode" />
+              <item name="Longbow" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="215abe6b-1ffd-46f0-9e91-d34500f43449" name="Default Changelist" comment="" />
+      <created>1583455629761</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583455629761</updated>
+      <workItem from="1583455633030" duration="3954000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3954000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="180" y="45" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
+            <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
+            <marker date="1583368126362" expanded="true" signature="303:12031" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="466:12029" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="2382:2414" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="2517:6425" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="2525:2735" ph="/* Reset transform since we cheated it right after getting poses on previous frame ... */" />
+            <marker date="1583368126362" expanded="true" signature="2778:6080" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="2993:3072" ph="/* Align bow ... */" />
+            <marker date="1583368126362" expanded="true" signature="4341:5948" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="4980:5015" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="5025:5061" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="5223:5592" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="5638:5942" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="5685:5935" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="5957:6075" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6088:6421" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6127:6416" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6358:6410" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6511:6780" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6692:6727" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6874:7231" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="6992:7169" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="7321:7354" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="7444:7611" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="7721:8105" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="8197:10097" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="8341:9190" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="8565:8610" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="8811:8898" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="9099:9185" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="9243:10093" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="9468:9513" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="9713:9800" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10001:10088" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10188:10487" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10336:10405" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10413:10483" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10575:10668" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10632:10664" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="10752:10988" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11070:11475" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11145:11471" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11243:11466" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11371:11460" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11575:11617" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11721:11791" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="11894:11928" ph="{...}" />
+            <marker date="1583368126362" expanded="true" signature="12003:12026" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <marker date="1583525120194" expanded="true" signature="6:78" ph="..." />
+            <marker date="1583525120194" expanded="true" signature="116:1251" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="207:1249" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="542:628" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="694:715" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="767:1122" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="870:1110" ph="{...}" />
+            <marker date="1583525120194" expanded="true" signature="1190:1243" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
