@@ -13,17 +13,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            <state relative-caret-position="402">
+              <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
               <folding>
-                <marker date="1583525120194" expanded="true" signature="6:78" ph="..." />
-                <marker date="1583525120194" expanded="true" signature="116:1251" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="207:1249" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="542:628" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="694:715" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="767:1122" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="870:1110" ph="{...}" />
-                <marker date="1583525120194" expanded="true" signature="1190:1243" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="6:78" ph="..." />
+                <marker date="1583698337430" expanded="true" signature="116:2714" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="207:2712" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="645:861" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="721:851" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+                <marker date="1583698337430" expanded="true" signature="927:1848" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="1046:1838" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="1310:1824" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
+                <marker date="1583698337430" expanded="true" signature="1900:2585" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="2055:2575" ph="{...}" />
+                <marker date="1583698337430" expanded="true" signature="2442:2561" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
+                <marker date="1583698337430" expanded="true" signature="2653:2706" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/PlayerControll.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+              <folding>
+                <marker date="1583540029639" expanded="true" signature="6:129" ph="..." />
+                <marker date="1583540029639" expanded="true" signature="174:545" ph="{...}" />
+                <marker date="1583540029639" expanded="true" signature="308:543" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -32,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="426">
+              <caret line="115" column="143" selection-start-line="115" selection-start-column="143" selection-end-line="115" selection-end-column="143" />
               <folding>
                 <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
                 <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
@@ -92,21 +110,23 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerControll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BowScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/PlayerControll.cs" />
         <option value="$PROJECT_DIR$/Assets/BowScript.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="45" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="153" />
+    <option name="y" value="-22" />
     <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectView">
     <navigator currentView="UnityExplorer" proportions="" version="1">
@@ -203,12 +223,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583455629761</updated>
-      <workItem from="1583455633030" duration="3954000" />
+      <workItem from="1583455633030" duration="22044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3954000" />
+    <option name="totallyTimeSpent" value="22044000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -220,13 +240,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="45" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18778028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -269,10 +288,22 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/PlayerControll.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+          <folding>
+            <marker date="1583540029639" expanded="true" signature="6:129" ph="..." />
+            <marker date="1583540029639" expanded="true" signature="174:545" ph="{...}" />
+            <marker date="1583540029639" expanded="true" signature="308:543" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="426">
+          <caret line="115" column="143" selection-start-line="115" selection-start-column="143" selection-end-line="115" selection-end-column="143" />
           <folding>
             <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
             <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
@@ -329,17 +360,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="402">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
           <folding>
-            <marker date="1583525120194" expanded="true" signature="6:78" ph="..." />
-            <marker date="1583525120194" expanded="true" signature="116:1251" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="207:1249" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="542:628" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="694:715" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="767:1122" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="870:1110" ph="{...}" />
-            <marker date="1583525120194" expanded="true" signature="1190:1243" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="6:78" ph="..." />
+            <marker date="1583698337430" expanded="true" signature="116:2714" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="207:2712" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="645:861" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="721:851" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+            <marker date="1583698337430" expanded="true" signature="927:1848" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="1046:1838" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="1310:1824" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
+            <marker date="1583698337430" expanded="true" signature="1900:2585" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="2055:2575" ph="{...}" />
+            <marker date="1583698337430" expanded="true" signature="2442:2561" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
+            <marker date="1583698337430" expanded="true" signature="2653:2706" ph="{...}" />
           </folding>
         </state>
       </provider>
