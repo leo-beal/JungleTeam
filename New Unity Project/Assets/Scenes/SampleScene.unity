@@ -655,10 +655,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1890190839, guid: 2002e33d65fd6a148a79d6ffc0c69ee0, type: 3}
+      propertyPath: DrawString
+      value: 
+      objectReference: {fileID: 2129040085}
     - target: {fileID: 273592756057619880, guid: 2002e33d65fd6a148a79d6ffc0c69ee0,
         type: 3}
       propertyPath: m_Name
       value: Bow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218612755014289984, guid: 2002e33d65fd6a148a79d6ffc0c69ee0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1646952118500130340, guid: 2002e33d65fd6a148a79d6ffc0c69ee0,
         type: 3}
@@ -722,3 +731,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 078173ece4b939f4f9d1b090f5471c14, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2002e33d65fd6a148a79d6ffc0c69ee0, type: 3}
+--- !u!95 &2129040085 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1218612755014289984, guid: 2002e33d65fd6a148a79d6ffc0c69ee0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2009969641}
+  m_PrefabAsset: {fileID: 0}
