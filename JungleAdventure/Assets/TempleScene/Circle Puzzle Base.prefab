@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9176138947651517278}
   - component: {fileID: 9176138947651517273}
   - component: {fileID: 9176138947651517272}
-  - component: {fileID: 9176138947651517275}
   - component: {fileID: 9176138947651517274}
+  - component: {fileID: 2095834216202522379}
   m_Layer: 0
   m_Name: Circle Puzzle Base
   m_TagString: Untagged
@@ -80,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &9176138947651517275
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176138947651517253}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &9176138947651517274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,17 +89,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 9176138947651517253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e215cffa0a71c429e121c0e5f0f578, type: 3}
+  m_Script: {fileID: 11500000, guid: a7567c92ebf16cc4cad9de7b6e7a12fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openPosition: {x: 135.5, y: 0.15, z: -1753}
-  closePosition: {x: 135.5, y: -0.5, z: -1753}
-  plates:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  initializeAsClosed: 1
-  transitionSpeed: 0.05
+  openPosition: {x: 0, y: 0, z: 0}
+  closePosition: {x: 0, y: 0, z: 0}
+  plates: []
+  initializeAsClosed: 0
+  transitionSpeed: 0
+--- !u!64 &2095834216202522379
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176138947651517253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
