@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.jungleadventure.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "B:\\Unity\\JungleTeam\\JungleAdventure\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "JungleAdventure [Testing]"
+        }
+      }
+    }
+  ]
+}
