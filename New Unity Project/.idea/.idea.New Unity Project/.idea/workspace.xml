@@ -13,25 +13,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="58" column="123" selection-start-line="58" selection-start-column="123" selection-end-line="58" selection-end-column="123" />
+            <state relative-caret-position="116">
+              <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
               <folding>
-                <marker date="1583878256650" expanded="true" signature="6:92" ph="..." />
-                <marker date="1583878256650" expanded="true" signature="130:4422" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="221:4420" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="696:1073" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="812:942" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
-                <marker date="1583878256650" expanded="true" signature="980:1063" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="1139:3513" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="1235:1561" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="1326:1515" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="1657:3503" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="2805:2877" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="2975:3489" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
-                <marker date="1583878256650" expanded="true" signature="3565:4293" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="3720:4283" ph="{...}" />
-                <marker date="1583878256650" expanded="true" signature="4150:4269" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
-                <marker date="1583878256650" expanded="true" signature="4361:4414" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="6:92" ph="..." />
+                <marker date="1584229499010" expanded="true" signature="130:5047" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="221:5045" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="807:1184" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="923:1053" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+                <marker date="1584229499010" expanded="true" signature="1091:1174" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="1250:4068" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="1346:1668" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="1437:1622" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="1764:4058" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="2792:3105" ph="/* currentArrow.transform.rotation = tail.transform.rotation; ... */" />
+                <marker date="1584229499010" expanded="true" signature="3360:3432" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="3530:4044" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
+                <marker date="1584229499010" expanded="true" signature="4120:4918" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="4267:4908" ph="{...}" />
+                <marker date="1584229499010" expanded="true" signature="4775:4894" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
+                <marker date="1584229499010" expanded="true" signature="4986:5039" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -54,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1230">
-              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            <state relative-caret-position="442">
+              <caret line="112" column="72" selection-start-line="112" selection-start-column="72" selection-end-line="112" selection-end-column="72" />
               <folding>
                 <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
                 <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
@@ -246,6 +247,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>look</find>
+    </findStrings>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/PlayerControll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Arrow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -365,12 +371,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583455629761</updated>
       <workItem from="1583455633030" duration="22044000" />
-      <workItem from="1583718848881" duration="15417000" />
+      <workItem from="1583718848881" duration="24935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37461000" />
+    <option name="totallyTimeSpent" value="46979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,8 +576,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Scripts/Longbow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1230">
-          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        <state relative-caret-position="442">
+          <caret line="112" column="72" selection-start-line="112" selection-start-column="72" selection-end-line="112" selection-end-column="72" />
           <folding>
             <marker date="1583368126362" expanded="true" signature="0:185" ph="/* ======= Copyright (c) Valve Corporation, All rights reserved. =============== ... */" />
             <marker date="1583368126362" expanded="false" signature="193:265" ph="..." />
@@ -628,25 +634,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="58" column="123" selection-start-line="58" selection-start-column="123" selection-end-line="58" selection-end-column="123" />
+        <state relative-caret-position="116">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
           <folding>
-            <marker date="1583878256650" expanded="true" signature="6:92" ph="..." />
-            <marker date="1583878256650" expanded="true" signature="130:4422" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="221:4420" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="696:1073" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="812:942" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
-            <marker date="1583878256650" expanded="true" signature="980:1063" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="1139:3513" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="1235:1561" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="1326:1515" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="1657:3503" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="2805:2877" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="2975:3489" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
-            <marker date="1583878256650" expanded="true" signature="3565:4293" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="3720:4283" ph="{...}" />
-            <marker date="1583878256650" expanded="true" signature="4150:4269" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
-            <marker date="1583878256650" expanded="true" signature="4361:4414" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="6:92" ph="..." />
+            <marker date="1584229499010" expanded="true" signature="130:5047" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="221:5045" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="807:1184" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="923:1053" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+            <marker date="1584229499010" expanded="true" signature="1091:1174" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="1250:4068" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="1346:1668" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="1437:1622" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="1764:4058" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="2792:3105" ph="/* currentArrow.transform.rotation = tail.transform.rotation; ... */" />
+            <marker date="1584229499010" expanded="true" signature="3360:3432" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="3530:4044" ph="/* nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position ... */" />
+            <marker date="1584229499010" expanded="true" signature="4120:4918" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="4267:4908" ph="{...}" />
+            <marker date="1584229499010" expanded="true" signature="4775:4894" ph="/* hand.otherHand.DetachObject(currentArrow); ... */" />
+            <marker date="1584229499010" expanded="true" signature="4986:5039" ph="{...}" />
           </folding>
         </state>
       </provider>

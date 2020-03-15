@@ -22,8 +22,13 @@ namespace Valve.VR.InteractionSystem
 
         public Animator DrawString;
 
+        public GameObject fireLoc;
+
         private GameObject currentArrow;
+        private GameObject pivot;
         private GameObject tail;
+
+        //private bool nockAnm = false;
         
         private Vector3 arrowOffset = new Vector3(-5, 0, 0);
         // Start is called before the first frame update
@@ -48,22 +53,29 @@ namespace Valve.VR.InteractionSystem
                 if (DrawString.enabled)
                 {
                     Debug.Log("reseting animation");
-                    DrawString.Play(0, 0, 0.0001f);
-                    DrawString.enabled = false;
+                    DrawString.Play(0, 0, 0);
+                    //DrawString.enabled = false;
                 }
                 noched = false;
             }
             if (noched && hand.otherHand.currentAttachedObject != null && currentArrow != null)
             {
                 //hand.objectAttachmentPoint.LookAt();
-                hand.currentAttachedObject.transform.LookAt(2 * this.transform.position - hand.otherHand.transform.position); //Probably a better way to do this
-                transform.localEulerAngles = transform.localEulerAngles + new Vector3(0, 0, .1f);
+
+                transform.rotation = Quaternion.LookRotation(hand.transform.position - hand.otherHand.transform.position, hand.transform.TransformDirection(Vector3.forward));
+                
+                //transform.localEulerAngles = transform.localEulerAngles + new Vector3(0, 0, .1f);
                 float zTransform = Mathf.Clamp(currentArrow.transform.localPosition.z - 7, nochEnd.transform.localPosition.z,
                     nochStart.transform.localPosition.z);
                 //nochFollow.transform.position = tail.transform.position;
                 currentArrow.transform.localPosition = new Vector3(0, 0, 7 + zTransform);
-                currentArrow.transform.localEulerAngles = new Vector3(nochStart.transform.localEulerAngles.x, nochStart.transform.localEulerAngles.y - 90, nochStart.transform.localEulerAngles.z);//nochStart.transform.localRotation;
-
+                //currentArrow.transform.localEulerAngles = new Vector3(nochStart.transform.localEulerAngles.x, nochStart.transform.localEulerAngles.y - 90, nochStart.transform.localEulerAngles.z);//nochStart.transform.localRotation;
+                currentArrow.transform.LookAt(fireLoc.transform);
+                //currentArrow.transform.rotation = tail.transform.rotation;
+                //Vector3 look = 2 * fireLoc.transform.position - tail.transform.position;
+                //Debug.Log("Trying to look at " + look);
+                //hand.currentAttachedObject.transform.LookAt(look); //Probably a better way to do this
+                
                 float distance = nochStart.transform.localPosition.z - nochEnd.transform.localPosition.z;
                 float point = -(currentArrow.transform.localPosition.z - 5.5f) / distance;
                 if (Math.Abs(point) > 1)
@@ -83,14 +95,16 @@ namespace Valve.VR.InteractionSystem
         private void OnTriggerEnter(Collider noch)
         {
             //only once per noch
-            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "Arrow Variant")
+            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "Arrow")
             {
                 currentArrow = hand.otherHand.currentAttachedObject;
                 currentArrow.transform.parent = nochFollow.transform;
                 noched = true;
-                tail = currentArrow.transform.Find("Whole").Find("Tail").gameObject;
+                tail = currentArrow.transform.Find("Tail").gameObject;
+                //pivot = currentArrow.transform.Find("pivot").gameObject;
                 currentArrow.transform.localPosition = new Vector3(tail.transform.position.x, 0, 0);
                 DrawString.enabled = true;
+                
                 //hand.otherHand.DetachObject(currentArrow);
                 //hand.otherHand.AttachObject(nochFollow, GrabTypes.None);
             }
