@@ -28,6 +28,10 @@ namespace Valve.VR.InteractionSystem
         private GameObject pivot;
         private GameObject tail;
 
+        private float point;
+
+        private float velocity = 25f;
+
         //private bool nockAnm = false;
         
         private Vector3 arrowOffset = new Vector3(-5, 0, 0);
@@ -35,7 +39,8 @@ namespace Valve.VR.InteractionSystem
         void Start()
         {
             nochCollider = GetComponent<Collider>();
-            DrawString.enabled = false;
+            DrawString.enabled = true;
+            DrawString.speed = 0.0f;
             //currentArrow.transform.up = nochStart.transform.right;
             //currentArrow.transform.right = nochStart.transform.forward;
             if ( DrawString == null )
@@ -49,35 +54,40 @@ namespace Valve.VR.InteractionSystem
         {
             if (currentArrow != null && hand.otherHand.currentAttachedObject == null)
             {
-                currentArrow = null;
-                if (DrawString.enabled)
+                currentArrow.transform.parent = null;
+
+                if (point > 0.1f)
                 {
-                    Debug.Log("reseting animation");
-                    DrawString.Play(0, 0, 0);
-                    //DrawString.enabled = false;
+                    ArrowScript arrow = currentArrow.GetComponent<ArrowScript>();
+
+                    currentArrow.transform.position = fireLoc.transform.position;
+
+
+                    arrow.Whole.AddForce(currentArrow.transform.forward * (velocity * point), ForceMode.VelocityChange);
+                    //arrow.Whole.AddTorque(currentArrow.transform.forward * 10);
+
+
+                    arrow.flying = true;
                 }
+
+                currentArrow = null;
+                point = 0f;
+                Debug.Log("reseting animation");
+                DrawString.Play(0, 0, point);
                 noched = false;
             }
             if (noched && hand.otherHand.currentAttachedObject != null && currentArrow != null)
             {
-                //hand.objectAttachmentPoint.LookAt();
 
                 transform.rotation = Quaternion.LookRotation(hand.transform.position - hand.otherHand.transform.position, hand.transform.TransformDirection(Vector3.forward));
                 
-                //transform.localEulerAngles = transform.localEulerAngles + new Vector3(0, 0, .1f);
                 float zTransform = Mathf.Clamp(currentArrow.transform.localPosition.z - 7, nochEnd.transform.localPosition.z,
                     nochStart.transform.localPosition.z);
-                //nochFollow.transform.position = tail.transform.position;
                 currentArrow.transform.localPosition = new Vector3(0, 0, 7 + zTransform);
-                //currentArrow.transform.localEulerAngles = new Vector3(nochStart.transform.localEulerAngles.x, nochStart.transform.localEulerAngles.y - 90, nochStart.transform.localEulerAngles.z);//nochStart.transform.localRotation;
                 currentArrow.transform.LookAt(fireLoc.transform);
-                //currentArrow.transform.rotation = tail.transform.rotation;
-                //Vector3 look = 2 * fireLoc.transform.position - tail.transform.position;
-                //Debug.Log("Trying to look at " + look);
-                //hand.currentAttachedObject.transform.LookAt(look); //Probably a better way to do this
-                
+
                 float distance = nochStart.transform.localPosition.z - nochEnd.transform.localPosition.z;
-                float point = -(currentArrow.transform.localPosition.z - 5.5f) / distance;
+                point = -(currentArrow.transform.localPosition.z - 5.5f) / distance;
                 if (Math.Abs(point) > 1)
                 {
                     point = .9999f;
@@ -85,10 +95,6 @@ namespace Valve.VR.InteractionSystem
                 
                 
                 DrawString.Play(0, 0, point);
-
-                //nochFollow.transform.position = new Vector3(currentArrow.transform.position.x, currentArrow.transform.position.y, currentArrow.transform.position.z);
-                //currentArrow.transform.position = new Vector3(nochFollow.transform.position.x - tail.transform.position.x, nochStart.transform.position.x, nochStart.transform.position.y);
-                //currentArrow.transform.eulerAngles = new Vector3(nochStart.transform.eulerAngles.z, nochStart.transform.eulerAngles.x, nochStart.transform.eulerAngles.y);
             }
         }
 
@@ -104,9 +110,6 @@ namespace Valve.VR.InteractionSystem
                 //pivot = currentArrow.transform.Find("pivot").gameObject;
                 currentArrow.transform.localPosition = new Vector3(tail.transform.position.x, 0, 0);
                 DrawString.enabled = true;
-                
-                //hand.otherHand.DetachObject(currentArrow);
-                //hand.otherHand.AttachObject(nochFollow, GrabTypes.None);
             }
         }
         
