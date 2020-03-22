@@ -9,10 +9,12 @@ public class DoorTrigger : MonoBehaviour
     public List<GameObject> plates;
 
     public bool initializeAsClosed;
+    public bool remainOpen;
 
     [Range(0.001f, 1f)]
     public float transitionSpeed;
 
+    private bool isOpen;
     private void Awake()
     {
         if (initializeAsClosed)
@@ -27,12 +29,18 @@ public class DoorTrigger : MonoBehaviour
 
         foreach (var plate in plates)
         {
+            if (isOpen && remainOpen)
+                break; //stay at open position since we want to stay open
+
             if (!plate.CompareTag("Pressed"))
             {
                 target = closePosition;
                 break;
             }
         }
+
+        if (target == openPosition)
+            isOpen = true;
 
         if (gameObject.transform.position != target)
             ComputePosition(target);

@@ -8,6 +8,8 @@ public class PlateTrigger : MonoBehaviour
     public Vector3 unpressedPosition;
     public List<GameObject> pressors;
 
+    [Range(0.001f, 1f)]
+    public float transitionSpeed;
     private void OnCollisionEnter(Collision other)
     {
         if (pressors.Contains(other.gameObject))
@@ -24,8 +26,8 @@ public class PlateTrigger : MonoBehaviour
     {
         var target = (gameObject.CompareTag("Pressed") ? pressedPosition : unpressedPosition);
 
-        //if (gameObject.transform.position != target)
-        //ComputePosition(target);
+        if (gameObject.transform.position != target)
+            ComputePosition(target);
     }
 
     private void ComputePosition(Vector3 target)
@@ -41,9 +43,9 @@ public class PlateTrigger : MonoBehaviour
         //1 or 0 based on if we are altering that component
         var transform = new Vector3()
         {
-            x = (gameObject.transform.position.x == target.x ? 0 : 1),
-            y = (gameObject.transform.position.y == target.y ? 0 : 1),
-            z = (gameObject.transform.position.z == target.z ? 0 : 1)
+            x = (gameObject.transform.position.x == target.x ? 0 : transitionSpeed),
+            y = (gameObject.transform.position.y == target.y ? 0 : transitionSpeed),
+            z = (gameObject.transform.position.z == target.z ? 0 : transitionSpeed)
         };
 
         //apply time difference
