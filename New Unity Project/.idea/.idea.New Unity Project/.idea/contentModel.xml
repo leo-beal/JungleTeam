@@ -8,7 +8,9 @@
       <e p="Assets" t="Include">
         <e p="ArrowScript.cs" t="Include" />
         <e p="BowScript.cs" t="Include" />
+        <e p="NewBowScript.cs" t="Include" />
         <e p="PlayerControll.cs" t="Include" />
+        <e p="QuiverScript.cs" t="Include" />
         <e p="SteamVR" t="Include">
           <e p="Editor" t="Include">
             <e p="SteamVR_AutoEnableVR.cs" t="Include" />
