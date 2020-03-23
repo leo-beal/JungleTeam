@@ -70,6 +70,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/DisplayInventory",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -106,7 +110,7 @@
   "action_sets": [
     {
       "name": "/actions/default",
-      "usage": "single"
+      "usage": "leftright"
     },
     {
       "name": "/actions/platformer",
@@ -190,7 +194,8 @@
       "/actions/default/in/B_Button": "B_Button",
       "/actions/default/in/A_Button": "A_Button",
       "/actions/default/in/X_Button": "X_Button",
-      "/actions/default/in/Y_Button": "Y_Button"
+      "/actions/default/in/Y_Button": "Y_Button",
+      "/actions/default/in/DisplayInventory": "DisplayInventory"
     }
   ]
 }
