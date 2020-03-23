@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="121" />
+            <state relative-caret-position="-319">
+              <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
               <folding>
                 <marker date="1584430499969" expanded="true" signature="6:92" ph="..." />
                 <marker date="1584430499969" expanded="true" signature="130:4088" ph="{...}" />
@@ -38,23 +38,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/NewBowScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
+            <state relative-caret-position="310">
+              <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
               <folding>
-                <marker date="1584942330421" expanded="true" signature="6:92" ph="..." />
-                <marker date="1584942330421" expanded="true" signature="130:4137" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="224:4135" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="921:1336" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="1075:1205" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
-                <marker date="1584942330421" expanded="true" signature="1243:1326" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="1402:3309" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="1498:2257" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="1601:2050" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="2353:3299" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="3133:3205" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="3361:4008" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="3511:3998" ph="{...}" />
-                <marker date="1584942330421" expanded="true" signature="4076:4129" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="6:92" ph="..." />
+                <marker date="1585004722878" expanded="true" signature="130:4642" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="224:4640" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="960:1375" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="1114:1244" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+                <marker date="1585004722878" expanded="true" signature="1282:1365" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="1441:3754" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="1464:2326" ph="/* if (currentArrow != null &amp;&amp; hand.otherHand.currentAttachedObject == null) ... */" />
+                <marker date="1585004722878" expanded="true" signature="2374:3744" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="3464:3536" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="3806:4513" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="3956:4503" ph="{...}" />
+                <marker date="1585004722878" expanded="true" signature="4581:4634" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -541,7 +540,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1843" />
@@ -618,12 +617,12 @@
       <updated>1583455629761</updated>
       <workItem from="1583455633030" duration="22044000" />
       <workItem from="1583718848881" duration="42744000" />
-      <workItem from="1584430689061" duration="15107000" />
+      <workItem from="1584430689061" duration="19267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79895000" />
+    <option name="totallyTimeSpent" value="84055000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,7 +634,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1843" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19226457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1297,8 +1297,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/BowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="121" />
+        <state relative-caret-position="-319">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
           <folding>
             <marker date="1584430499969" expanded="true" signature="6:92" ph="..." />
             <marker date="1584430499969" expanded="true" signature="130:4088" ph="{...}" />
@@ -1320,23 +1320,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/NewBowScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="87" column="74" selection-start-line="87" selection-start-column="74" selection-end-line="87" selection-end-column="74" />
+        <state relative-caret-position="310">
+          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
           <folding>
-            <marker date="1584942330421" expanded="true" signature="6:92" ph="..." />
-            <marker date="1584942330421" expanded="true" signature="130:4137" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="224:4135" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="921:1336" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="1075:1205" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
-            <marker date="1584942330421" expanded="true" signature="1243:1326" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="1402:3309" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="1498:2257" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="1601:2050" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="2353:3299" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="3133:3205" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="3361:4008" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="3511:3998" ph="{...}" />
-            <marker date="1584942330421" expanded="true" signature="4076:4129" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="6:92" ph="..." />
+            <marker date="1585004722878" expanded="true" signature="130:4642" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="224:4640" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="960:1375" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="1114:1244" ph="/* currentArrow.transform.up = nochStart.transform.right; ... */" />
+            <marker date="1585004722878" expanded="true" signature="1282:1365" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="1441:3754" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="1464:2326" ph="/* if (currentArrow != null &amp;&amp; hand.otherHand.currentAttachedObject == null) ... */" />
+            <marker date="1585004722878" expanded="true" signature="2374:3744" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="3464:3536" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="3806:4513" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="3956:4503" ph="{...}" />
+            <marker date="1585004722878" expanded="true" signature="4581:4634" ph="{...}" />
           </folding>
         </state>
       </provider>

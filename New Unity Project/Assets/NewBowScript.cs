@@ -20,6 +20,8 @@ namespace Valve.VR.InteractionSystem
 
         public GameObject nochEnd;
 
+        public GameObject nockFollow;
+
         public Animator DrawString;
 
         public GameObject fireLoc;
@@ -54,6 +56,7 @@ namespace Valve.VR.InteractionSystem
         // Update is called once per frame
         void Update()
         {
+            /*
             if (currentArrow != null && hand.otherHand.currentAttachedObject == null)
             {
                 currentArrow.transform.parent = null;
@@ -78,25 +81,36 @@ namespace Valve.VR.InteractionSystem
                 DrawString.Play(0, 0, point);
                 noched = false;
             }
-            if (noched && hand.otherHand.currentAttachedObject != null && currentArrow != null)
+            */
+            if (noched && currentArrow != null)
             {
 
                 transform.rotation = Quaternion.LookRotation(hand.transform.position - hand.otherHand.transform.position, hand.transform.TransformDirection(Vector3.forward));
                 
-                float zTransform = Mathf.Clamp(currentArrow.transform.localPosition.z - 2, nochEnd.transform.localPosition.z,
-                    nochStart.transform.localPosition.z);
-                currentArrow.transform.localPosition = new Vector3(0, 0, 2 + zTransform);
+                float zTransform = Mathf.Clamp(currentArrow.transform.localPosition.x + 0.642f, nochStart.transform.localPosition.x,
+                    nochEnd.transform.localPosition.x);
+
+                float controllDist =
+                    Mathf.Clamp(
+                        Vector3.Distance(hand.gameObject.transform.position,
+                            hand.otherHand.gameObject.transform.position), 0, 1.5f);
+
+                controllDist /= 1.5f;// = controllDist / 3;
+                
+                currentArrow.transform.localPosition = new Vector3(zTransform - 0.642f, 0, 0);
                 currentArrow.transform.LookAt(fireLoc.transform);
 
-                float distance = nochStart.transform.localPosition.z - nochEnd.transform.localPosition.z;
-                point = -(currentArrow.transform.localPosition.z - 5.5f) / distance;
-                if (Math.Abs(point) > 1)
+                float distance = nochEnd.transform.localPosition.x - nochStart.transform.localPosition.x;
+                point = (currentArrow.transform.localPosition.x) / distance;
+                if (controllDist > 1)
                 {
                     point = .9999f;
                 }
                 
+                Debug.Log("Point: "  + point);
+                Debug.Log("controllDist: " + controllDist);
                 
-                DrawString.Play(0, 0, point);
+                DrawString.Play(0, 0, controllDist);
             }
         }
 
@@ -106,7 +120,8 @@ namespace Valve.VR.InteractionSystem
             if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "NewArrow")
             {
                 currentArrow = hand.otherHand.currentAttachedObject;
-                currentArrow.transform.parent = nochStart.transform;
+                hand.otherHand.DetachObject(currentArrow);
+                currentArrow.transform.parent = nockFollow.transform;
                 noched = true;
                 tail = currentArrow.transform.Find("Tail").gameObject;
                 //pivot = currentArrow.transform.Find("pivot").gameObject;
