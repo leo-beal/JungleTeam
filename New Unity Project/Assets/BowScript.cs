@@ -101,7 +101,7 @@ namespace Valve.VR.InteractionSystem
         private void OnTriggerEnter(Collider noch)
         {
             //only once per noch
-            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "Arrow")
+            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "Arrow" && hand.otherHand.currentAttachedObject.name.Substring(0, 5) == "NewArrow")
             {
                 currentArrow = hand.otherHand.currentAttachedObject;
                 currentArrow.transform.parent = nochFollow.transform;

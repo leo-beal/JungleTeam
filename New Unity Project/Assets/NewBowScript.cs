@@ -26,6 +26,8 @@ namespace Valve.VR.InteractionSystem
 
         public GameObject fireLoc;
 
+        public GameObject fireLocPrev;
+
         //public Collider nochCollider;
 
         private GameObject currentArrow;
@@ -35,6 +37,13 @@ namespace Valve.VR.InteractionSystem
         private float point;
 
         private float velocity = 25f;
+
+        private bool grabbingArrow;
+
+        private Vector3 prevLocPos;
+        private Vector3 prevLocRot;
+
+        private float dist;
 
         //private bool nockAnm = false;
         
@@ -51,38 +60,49 @@ namespace Valve.VR.InteractionSystem
             {
                 DrawString = GetComponent<Animator>();
             }
+            
         }
 
         // Update is called once per frame
         void Update()
         {
-            /*
+
             if (currentArrow != null && hand.otherHand.currentAttachedObject == null)
             {
-                currentArrow.transform.parent = null;
+                currentArrow.transform.parent = fireLocPrev.transform;
 
-                if (point > 0.1f)
+                if (dist > 0.1f)
                 {
-                    ArrowScript arrow = currentArrow.GetComponent<ArrowScript>();
+                    NewArrowScript arrow = currentArrow.GetComponent<NewArrowScript>();
 
-                    currentArrow.transform.position = fireLoc.transform.position;
+                    currentArrow.transform.position = fireLocPrev.transform.position;
+                    currentArrow.transform.localEulerAngles = prevLocRot + new Vector3(0, 0, 0);
 
+                    currentArrow.transform.parent = null;
+                    
+                    
 
-                    arrow.Whole.AddForce(currentArrow.transform.forward * (velocity * point), ForceMode.VelocityChange);
+                    arrow.Whole.AddForce(currentArrow.transform.forward * (velocity * dist), ForceMode.VelocityChange);
                     //arrow.Whole.AddTorque(currentArrow.transform.forward * 10);
 
 
                     arrow.flying = true;
                 }
-
+                else
+                { 
+                    currentArrow.transform.parent = null;
+                }
+                
+                //hand.otherHand.show();
+                
                 currentArrow = null;
-                point = 0f;
+                dist = 0f;
                 Debug.Log("reseting animation");
-                DrawString.Play(0, 0, point);
+                DrawString.Play(0, 0, dist);
                 noched = false;
             }
-            */
-            if (noched && currentArrow != null)
+            
+            if (noched && currentArrow != null && hand.otherHand.currentAttachedObject != null)
             {
 
                 transform.rotation = Quaternion.LookRotation(hand.transform.position - hand.otherHand.transform.position, hand.transform.TransformDirection(Vector3.forward));
@@ -90,37 +110,48 @@ namespace Valve.VR.InteractionSystem
                 float zTransform = Mathf.Clamp(currentArrow.transform.localPosition.x + 0.642f, nochStart.transform.localPosition.x,
                     nochEnd.transform.localPosition.x);
 
-                float controllDist =
+                dist =
                     Mathf.Clamp(
                         Vector3.Distance(hand.gameObject.transform.position,
-                            hand.otherHand.gameObject.transform.position), 0, 1.5f);
+                            hand.otherHand.gameObject.transform.position) * 2, 0, 1.5f);
 
-                controllDist /= 1.5f;// = controllDist / 3;
+                dist /= 1.5f;// = controllDist / 3;
                 
-                currentArrow.transform.localPosition = new Vector3(zTransform - 0.642f, 0, 0);
+                //currentArrow.transform.localPosition = new Vector3(zTransform - 0.642f, 0, 0);
+                //currentArrow.transform.position = nockFollow.transform.position;
+                currentArrow.transform.localPosition = new Vector3(-.642f, 0, -.016f);
                 currentArrow.transform.LookAt(fireLoc.transform);
 
                 float distance = nochEnd.transform.localPosition.x - nochStart.transform.localPosition.x;
                 point = (currentArrow.transform.localPosition.x) / distance;
-                if (controllDist > 1)
+                if (dist > 1)
                 {
-                    point = .9999f;
+                    dist = .9999f;
                 }
+        
+                DrawString.Play(0, 0, dist);
+
+                //prevLocPos = fireLoc.transform.localPosition;
+                prevLocRot = transform.eulerAngles;
                 
-                Debug.Log("Point: "  + point);
-                Debug.Log("controllDist: " + controllDist);
-                
-                DrawString.Play(0, 0, controllDist);
+                //Debug.Log(prevLocRot);
+                Debug.Log(transform.eulerAngles);
+
+                fireLocPrev.transform.position = fireLoc.transform.position;
+                //fireLocPrev.transform.localPosition = fireLoc.transform.localPosition;
+                //fireLocPrev.transform.rotation = transform.localRotation;
             }
         }
 
         private void OnTriggerEnter(Collider noch)
         {
             //only once per noch
-            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name == "NewArrow")
+            if (!noched && noch.name == "Tail" && hand.otherHand.currentAttachedObject.name.Substring(0, 8) == "NewArrow")
             {
                 currentArrow = hand.otherHand.currentAttachedObject;
-                hand.otherHand.DetachObject(currentArrow);
+                //hand.otherHand.DetachObject(currentArrow);
+                hand.otherHand.Hide();
+                //hand.otherHand.Show();
                 currentArrow.transform.parent = nockFollow.transform;
                 noched = true;
                 tail = currentArrow.transform.Find("Tail").gameObject;

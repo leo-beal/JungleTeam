@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="ArrowScript.cs" t="Include" />
         <e p="BowScript.cs" t="Include" />
+        <e p="NewArrowScript.cs" t="Include" />
         <e p="NewBowScript.cs" t="Include" />
         <e p="PlayerControll.cs" t="Include" />
         <e p="QuiverScript.cs" t="Include" />
