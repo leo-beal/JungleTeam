@@ -101,8 +101,18 @@ public class Inventory : MonoBehaviour
         //create the canvas for the gameobject
         var c = this.canvas.AddComponent<Canvas>();
 
-        c.transform.SetParent(hand.transform, false);
-        c.transform.localPosition = new Vector3(0, 0, 1.5f);
+        var playerPosition = hand.transform.parent.transform.parent.localPosition;
+        var playerDirection = hand.transform.parent.transform.parent.forward;
+        var playerRotation = hand.transform.parent.transform.parent.rotation;
+
+        c.transform.localPosition = playerPosition + (playerDirection * -2) + new Vector3(0, 1, 0);
+
+        if (hand.name.Contains("Right"))
+            c.transform.Translate(new Vector3(-1.1f, 0, 0), hand.transform.parent.transform.parent);
+
+        c.transform.LookAt(hand.transform.position);
+        c.transform.rotation = playerRotation;
+
         c.renderMode = RenderMode.WorldSpace;
 
         //create scale for canvas
@@ -129,6 +139,7 @@ public class Inventory : MonoBehaviour
         text.alignment = TextAnchor.UpperCenter;
         text.fontStyle = FontStyle.Bold;
         newText.transform.SetParent(c.transform, false);
+        newText.transform.localRotation = new Quaternion(0, 180, 0, newText.transform.localRotation.w);
 
         //list items that are currently in the inventory
         float offset = 0.1f;
@@ -143,6 +154,7 @@ public class Inventory : MonoBehaviour
             text.color = Color.black;
             newText.transform.SetParent(c.transform, false);
             newText.transform.localPosition = new Vector3(0, -offset, 0);
+            newText.transform.localRotation = new Quaternion(0, 180, 0, newText.transform.localRotation.w);
             offset += 0.1f;
         }
     }

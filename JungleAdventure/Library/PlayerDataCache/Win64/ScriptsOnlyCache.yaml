@@ -41,7 +41,6 @@ ScriptsOnlyBuild:
     - Valve.VR.SteamVR_Input_EditorWindow
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -207,6 +206,10 @@ ScriptsOnlyBuild:
     - Class: 156
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -437,7 +440,7 @@ ScriptsOnlyBuild:
     className: SteamVR_Behaviour_Boolean
   - hash:
       serializedVersion: 2
-      Hash: 4ce1613b1551c0ab9f04286dbbfe696e
+      Hash: 7733e3fa6e327119ecbf567c3710b2f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorTrigger
@@ -611,7 +614,7 @@ ScriptsOnlyBuild:
     className: InteractableExample
   - hash:
       serializedVersion: 2
-      Hash: 641aac4d6f95117071660b0d9c6f759c
+      Hash: 75d352035235b5cbcb2d2c340fa75088
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -965,7 +968,7 @@ ScriptsOnlyBuild:
     className: SteamVR_ForceSteamVRMode
   - hash:
       serializedVersion: 2
-      Hash: 5c41f794cfb0b41a282fbc2f15a8c3dd
+      Hash: 81540d6d6870f333f5d6c84c72d44782
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlateTrigger
@@ -1434,4 +1437,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: B:/Unity/Jungle Team Weekly Builds/March 16/JungleAdventure.exe
+  playerPath: B:/Unity/Jungle Team Weekly Builds/March 23/JungleAdventure.exe
