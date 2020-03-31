@@ -16,17 +16,28 @@ public class PedestalTrigger : MonoBehaviour
     public float transitionSpeed;
 
     private bool isOpen = false;
+    private Vector3 initialPosition;
+    private Vector3 finalPosition;
+    private Vector3 targetPosition;
+
     private void Awake()
     {
         if (initializeAsClosed)
-            gameObject.transform.position = closePosition;
+        {
+            finalPosition = openPosition;
+            targetPosition = initialPosition = closePosition;
+        }
         else
-            gameObject.transform.position = openPosition;
+        {
+            finalPosition = closePosition;
+            targetPosition = initialPosition = openPosition;
+        }    
+
+        gameObject.transform.position = initialPosition;
     }
 
     private void Update()
     {
-        Vector3 target = openPosition;
         var pressed = true;
         var solved = true;
 
@@ -46,24 +57,23 @@ public class PedestalTrigger : MonoBehaviour
         {
             foreach (var tier in Tiers)
             {
-                if (!solved)
-                    continue;
-
                 var tierSolved = tier.CheckSolved();
 
                 if (!tierSolved)
                     solved = false;
             }
+
+            if (!solved)
+                targetPosition = initialPosition;
+            else
+                targetPosition = finalPosition;
+
+            if (gameObject.transform.position == finalPosition)
+                isOpen = true;
         }
 
-        if (!solved)
-            target = closePosition;
-
-        if (gameObject.transform.position == openPosition)
-            isOpen = true;
-
-        if (gameObject.transform.position != target)
-            ComputePosition(target);
+        if (gameObject.transform.position != targetPosition)
+            ComputePosition(targetPosition);
     }
 
     private void ComputePosition(Vector3 target)
