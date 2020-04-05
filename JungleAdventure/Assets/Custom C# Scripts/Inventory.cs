@@ -9,7 +9,7 @@ using Valve.VR.InteractionSystem;
 
 public class Inventory : MonoBehaviour
 {
-    private List<Interactable> objects = new List<Interactable>();
+    public List<Interactable> objects = new List<Interactable>();
 
     public SteamVR_Action_Boolean addToInventory;
     public SteamVR_Action_Boolean pullFromInventory;
@@ -70,11 +70,7 @@ public class Inventory : MonoBehaviour
                 hand.HoverLock(grab);
             }
 
-            if (this.canvas != null)
-            {
-                DestroyCanvas();
-                CreateCanvas();
-            }
+            RecreateCanvas();
         }
 
         if (displayInventory.stateDown)
@@ -83,6 +79,15 @@ public class Inventory : MonoBehaviour
                 DestroyCanvas();
             else
                 CreateCanvas();
+        }
+    }
+
+    public void RecreateCanvas()
+    {
+        if (this.canvas != null)
+        {
+            DestroyCanvas();
+            CreateCanvas();
         }
     }
 
@@ -103,6 +108,9 @@ public class Inventory : MonoBehaviour
 
         //size our canvas
         this.canvas.AddComponent<RectTransform>().sizeDelta = size;
+        var canvasCollider = this.canvas.AddComponent<BoxCollider>();
+        canvasCollider.size = size;
+        canvasCollider.transform.localPosition += new Vector3(0, 0, 0.005f);
 
         //create the canvas for the gameobject
         var c = this.canvas.AddComponent<Canvas>();
@@ -113,7 +121,7 @@ public class Inventory : MonoBehaviour
         var playerDirection = camera.forward;
         var playerRotation = camera.rotation;
 
-        c.transform.position = playerPosition + (playerDirection * 2);
+        c.transform.position = playerPosition + (playerDirection * 2) + new Vector3(0, -(height / 2), 0);
 
         if (hand.name.Contains("Right"))
             c.transform.Translate(new Vector3(0.55f, 0, 0), camera);
@@ -154,11 +162,20 @@ public class Inventory : MonoBehaviour
 
         //list items that are currently in the inventory
         float offset = 0.1f;
+        size.y = offset;
+        var top = new Vector3(0, height / 2, 0);
 
         foreach (var o in this.objects)
         {
+            var position = top - new Vector3(0, offset + 0.1f, 0);
+
             var buttonObject = new GameObject();
             buttonObject.transform.SetParent(panel.transform, false);
+
+            var uiButton = buttonObject.AddComponent<UIButton>();
+            uiButton.hover = Color.yellow;
+            uiButton.color = Color.black;
+            uiButton.item = o;
 
             var button = buttonObject.AddComponent<Button>();
             button.onClick.AddListener(() =>
@@ -184,15 +201,20 @@ public class Inventory : MonoBehaviour
                 hand.HoverLock(o);
             });
 
+            var collider = buttonObject.AddComponent<BoxCollider>();
+            collider.size = new Vector3(size.x, size.y, 0.01f);
+            collider.transform.localPosition = position;
+
             newText = new GameObject();
             newText.AddComponent<RectTransform>().sizeDelta = size;
             newText.transform.SetParent(buttonObject.transform, false);
-            newText.transform.localPosition = new Vector3(0, -offset, 0);
 
             text = newText.AddComponent<Text>();
             text.text = o.name;
             text.color = Color.black;
             text.font = Font.CreateDynamicFontFromOSFont(fonts[0], 1);
+
+            uiButton.text = text;
 
             offset += 0.1f;
         }
