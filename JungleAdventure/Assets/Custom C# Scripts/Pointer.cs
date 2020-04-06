@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
@@ -10,6 +13,10 @@ public class Pointer : MonoBehaviour
     public GameObject End;
     //public InputModule inputModule;
     public SteamVR_Action_Boolean Activator;
+
+    public List<GameObject> Inventories;
+    public SteamVR_Action_Boolean Selector;
+
     [Range(1f, 30f)]
     public float ActivatedTime;
     public Hand hand;
@@ -17,16 +24,23 @@ public class Pointer : MonoBehaviour
     private LineRenderer lineRenderer;
     private bool isActive;
     private float elapsedTime;
+    private UIButton button;
 
     private void Awake()
     {
         lineRenderer = this.gameObject.GetComponent<LineRenderer>();
         isActive = false;
         elapsedTime = 0;
+        button = null;
     }
 
     void Update()
     {
+        if (Selector.active && Selector.stateDown && Selector.activeDevice.ToString() == hand.name && button != null)
+        {
+            TrySelectFromInventory();
+        }
+
         //player pressed the button
         if (Activator.active && Activator.state && Activator.activeDevice.ToString() == hand.name)
         {
@@ -71,6 +85,43 @@ public class Pointer : MonoBehaviour
         }
     }
 
+    private void TrySelectFromInventory()
+    {
+        var root = button.item.transform.root.gameObject;
+        var rootInteractable = root.GetComponent<Interactable>();
+
+        foreach (var inventory in this.Inventories)
+        {
+            var list = inventory.GetComponent<Inventory>();
+
+            if (list.objects.Contains(rootInteractable))
+            {
+                list.objects.Remove(rootInteractable);
+
+                var attachedObjects = hand.AttachedObjects;
+
+                foreach (var o in attachedObjects)
+                {
+                    var interactable = o.attachedObject.GetComponent<Interactable>();
+
+                    if (interactable != null)
+                    {
+                        hand.DetachObject(rootInteractable.gameObject, false);
+                        hand.HoverUnlock(rootInteractable);
+                        list.objects.Add(rootInteractable);
+                    }
+                }
+
+                root.SetActive(true);
+
+                hand.AttachObject(root, GrabTypes.Grip);
+                hand.HoverLock(rootInteractable);
+            }
+
+            list.RecreateCanvas();
+        }
+    }
+
     void UpdateTime()
     {
         if (!isActive)
@@ -84,6 +135,11 @@ public class Pointer : MonoBehaviour
         }
     }
 
+    void ResetTime()
+    {
+        elapsedTime = 0;
+    }
+
     RaycastHit UpdateLine()
     {
         UpdateTime();
@@ -95,7 +151,27 @@ public class Pointer : MonoBehaviour
         var position = transform.position + (transform.forward * length);
 
         if (hit.collider != null)
+        {
             position = hit.point;
+
+            var tempbutton = hit.collider.gameObject.GetComponent<UIButton>();
+
+            if (tempbutton != null)
+            {
+                ResetTime();
+
+                if (button != null)
+                    button.RemoveHighlight();
+
+                button = tempbutton;
+                button.Highlight();
+            }
+            else if (button != null)
+            {
+                button.RemoveHighlight();
+                button = null;
+            }
+        }
 
         End.transform.position = position;
 

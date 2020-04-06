@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - Pressed
+  - ArrowTip
+  - Flamable
+  - PointerEnd
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
