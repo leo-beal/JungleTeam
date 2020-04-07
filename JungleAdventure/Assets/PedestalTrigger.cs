@@ -12,6 +12,8 @@ public class PedestalTrigger : MonoBehaviour
     public bool initializeAsClosed;
     public bool remainOpen;
 
+    public int IncorrectAttempts;
+
     [Range(0.001f, 1f)]
     public float transitionSpeed;
 
@@ -19,6 +21,9 @@ public class PedestalTrigger : MonoBehaviour
     private Vector3 initialPosition;
     private Vector3 finalPosition;
     private Vector3 targetPosition;
+    private bool released = true;
+    private int IncorrectCount = 0;
+    private int SolvedCount = 0;
 
     private void Awake()
     {
@@ -31,7 +36,15 @@ public class PedestalTrigger : MonoBehaviour
         {
             finalPosition = closePosition;
             targetPosition = initialPosition = openPosition;
-        }    
+        }
+
+        // Get the initial count of solved tiers, should just be the outer tier
+        //foreach (var tier in Tiers)
+        //{
+        //    if (tier.CheckSolved())
+        //        SolvedCount++;
+        //}
+        SolvedCount = 1; // Always just start with the outer most tier
 
         gameObject.transform.position = initialPosition;
     }
@@ -48,28 +61,66 @@ public class PedestalTrigger : MonoBehaviour
 
             if (!plate.CompareTag("Pressed"))
             {
+                released = true;
                 pressed = false;
                 break;
             }
         }
 
-        if (pressed)
+        if (released && pressed)
         {
+            int sc = 0;
+            released = false;
+
             foreach (var tier in Tiers)
             {
                 var tierSolved = tier.CheckSolved();
 
                 if (!tierSolved)
                     solved = false;
+                else
+                    sc++;
             }
 
+            // Set the target position based on whether or not the entire puzzle has been solved
             if (!solved)
                 targetPosition = initialPosition;
             else
                 targetPosition = finalPosition;
 
+            // Check to see if a new tier has been solved
+            if (sc > SolvedCount)
+            {
+                // A new tier has been solved
+                // Make centerpiece glow green?
+                // Eject item placed on plate
+
+                foreach (var plate in plates)
+                {
+                    var pt = plate.GetComponent<PlateTrigger>();
+
+                    if (pt != null)
+                        pt.Eject();
+                }
+
+                SolvedCount = sc;
+            }
+            else
+            {
+                // No new tiers have been solved
+                // Make centerpiece glow red?
+                IncorrectCount++;
+            }
+
             if (gameObject.transform.position == finalPosition)
                 isOpen = true;
+        }
+
+        if (IncorrectCount > IncorrectAttempts)
+        {
+            // Spring the trap and reset the count
+            Debug.Log("Spring the trap");
+            IncorrectCount = 0;
         }
 
         if (gameObject.transform.position != targetPosition)
