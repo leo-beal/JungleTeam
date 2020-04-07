@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SocialPlatforms.GameCenter;
 
 public class Tier : MonoBehaviour
 {
@@ -81,6 +83,9 @@ public class Tier : MonoBehaviour
 
     private void SetMaterial()
     {
+        if (Solved == null)
+            return;
+
         renderer.material = IsSolved ? Solved : Unsolved;
     }
 
@@ -95,6 +100,19 @@ public class Tier : MonoBehaviour
 
         if (Inner != null)
             Inner.StepTierDown();
+    }
+
+    private void StepTierUp()
+    {
+        TargetPosition = new Vector3()
+        {
+            x = gameObject.transform.position.x,
+            y = gameObject.transform.position.y + TierStep,
+            z = gameObject.transform.position.z
+        };
+
+        if (Outer != null)
+            Outer.StepTierUp();
     }
 
     public bool CheckSolved()

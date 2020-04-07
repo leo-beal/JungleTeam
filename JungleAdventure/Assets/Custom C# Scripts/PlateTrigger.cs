@@ -30,6 +30,19 @@ public class PlateTrigger : MonoBehaviour
             ComputePosition(target);
     }
 
+    public void Eject()
+    {
+        Vector3 ejectionForce = new Vector3(0, 5);
+
+        foreach (var pressor in pressors)
+        {
+            var rb = pressor.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.velocity += ejectionForce;
+        }
+    }
+
     private void ComputePosition(Vector3 target)
     {
         //compute mins and maxes
