@@ -68,11 +68,11 @@ namespace Valve.VR.InteractionSystem
 
 				if ( highlight )
 				{
-					areaMesh.material = Teleport.instance.areaHighlightedMaterial;
+					//areaMesh.material = Teleport.instance.areaHighlightedMaterial;
 				}
 				else
 				{
-					areaMesh.material = Teleport.instance.areaVisibleMaterial;
+					//areaMesh.material = Teleport.instance.areaVisibleMaterial;
 				}
 			}
 		}
@@ -83,7 +83,7 @@ namespace Valve.VR.InteractionSystem
 		{
 			Color tintedColor = GetTintColor();
 			tintedColor.a *= alphaPercent;
-			areaMesh.material.SetColor( tintColorId, tintedColor );
+			//areaMesh.material.SetColor( tintColorId, tintedColor );
 		}
 
 
@@ -92,11 +92,11 @@ namespace Valve.VR.InteractionSystem
 		{
 			if ( locked )
 			{
-				areaMesh.material = Teleport.instance.areaLockedMaterial;
+				//areaMesh.material = Teleport.instance.areaLockedMaterial;
 			}
 			else
 			{
-				areaMesh.material = Teleport.instance.areaVisibleMaterial;
+				//areaMesh.material = Teleport.instance.areaVisibleMaterial;
 			}
 		}
 
@@ -111,11 +111,11 @@ namespace Valve.VR.InteractionSystem
 
 			if ( locked )
 			{
-				areaMesh.sharedMaterial = Teleport.instance.areaLockedMaterial;
+				//areaMesh.sharedMaterial = Teleport.instance.areaLockedMaterial;
 			}
 			else
 			{
-				areaMesh.sharedMaterial = Teleport.instance.areaVisibleMaterial;
+				//areaMesh.sharedMaterial = Teleport.instance.areaVisibleMaterial;
 			}
 		}
 
