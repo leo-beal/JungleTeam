@@ -4888,6 +4888,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1640746852}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &245160948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 657639477642408057, guid: 5425a838c6f2a524db24454d491477fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 485779418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &245160954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245160948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7213d71bb9563a49847b9863f10e501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BurnTime: 5
+  Burning: 0
+  Burned: 0
 --- !u!1 &247732280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5446885846240309209, guid: 24083692797349945b88f3d90e78eacf,
@@ -8917,7 +8938,7 @@ PrefabInstance:
     - target: {fileID: 657639477642408052, guid: 5425a838c6f2a524db24454d491477fe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4419983
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 657639477642408052, guid: 5425a838c6f2a524db24454d491477fe,
         type: 3}
@@ -8968,6 +8989,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 33.593
+      objectReference: {fileID: 0}
+    - target: {fileID: 657639477642408052, guid: 5425a838c6f2a524db24454d491477fe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.1923
+      objectReference: {fileID: 0}
+    - target: {fileID: 657639477642408058, guid: 5425a838c6f2a524db24454d491477fe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 179555ab8bd66734b8c1ac67e84c7cbc, type: 2}
+    - target: {fileID: 657639477642408056, guid: 5425a838c6f2a524db24454d491477fe,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5425a838c6f2a524db24454d491477fe, type: 3}
@@ -13964,6 +14000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15aaf653fe8d34743839ca0fb0292d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BurnTime: 5
 --- !u!1 &754092207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9207650994940237655, guid: 24083692797349945b88f3d90e78eacf,
