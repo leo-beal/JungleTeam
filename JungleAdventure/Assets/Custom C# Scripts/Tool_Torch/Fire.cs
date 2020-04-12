@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
+    public float BurnTime = 5.0f;
+
+    private bool burned;
+
     Flicker flicker;
+    Flamable flamable;
     // Start is called before the first frame update
     void Start()
     {
         flicker = GetComponent<Flicker>();
-        flicker.enabled = this.enabled;
+        
+        if (flicker != null)
+            flicker.enabled = this.enabled;
     }
 
     private void OnDisable()
@@ -31,8 +38,17 @@ public class Fire : MonoBehaviour
 
         if (collision.collider.CompareTag("Flamable"))
         {
-            collision.collider.enabled = false;
-            collision.gameObject.SetActive(false);
+            flamable = collision.collider.gameObject.GetComponent<Flamable>();
+            burned = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (burned)
+        {
+            if (flamable != null)
+                flamable.Ignite();
         }
     }
 }
