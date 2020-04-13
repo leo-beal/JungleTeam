@@ -6,6 +6,7 @@ public class PlateTrigger : MonoBehaviour
 {
     public Vector3 pressedPosition;
     public Vector3 unpressedPosition;
+    public Vector3 EjectionForce;
     public List<GameObject> pressors;
 
     [Range(0.001f, 1f)]
@@ -32,14 +33,12 @@ public class PlateTrigger : MonoBehaviour
 
     public void Eject()
     {
-        Vector3 ejectionForce = new Vector3(0, 5);
-
         foreach (var pressor in pressors)
         {
             var rb = pressor.GetComponent<Rigidbody>();
 
             if (rb != null)
-                rb.velocity += ejectionForce;
+                rb.velocity += EjectionForce;
         }
     }
 

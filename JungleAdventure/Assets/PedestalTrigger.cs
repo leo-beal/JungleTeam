@@ -116,7 +116,7 @@ public class PedestalTrigger : MonoBehaviour
                 isOpen = true;
         }
 
-        if (IncorrectCount > IncorrectAttempts)
+        if (IncorrectCount > IncorrectAttempts && SolvedCount != Tiers.Count)
         {
             // Spring the trap and reset the count
             Debug.Log("Spring the trap");
