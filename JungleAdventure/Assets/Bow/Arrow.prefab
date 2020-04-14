@@ -1573,6 +1573,7 @@ MonoBehaviour:
   Shaft: {fileID: 2106439014939114941}
   Tail: {fileID: 2106439014956211753}
   Whole: {fileID: 2106439016241205743}
+  fire: {fileID: 1613513327453743704}
 --- !u!114 &2106439016241205741
 MonoBehaviour:
   m_ObjectHideFlags: 0

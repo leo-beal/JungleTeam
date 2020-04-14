@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class Fire : MonoBehaviour
 {
@@ -40,6 +41,11 @@ public class Fire : MonoBehaviour
         {
             flamable = collision.collider.gameObject.GetComponent<Flamable>();
             burned = true;
+        }
+        if (collision.gameObject.name.Substring(0, 5) == "Arrow")
+        {
+            ArrowScript arrow = collision.gameObject.GetComponent<ArrowScript>();
+            arrow.flaming = true;
         }
     }
 
