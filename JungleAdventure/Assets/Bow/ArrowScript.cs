@@ -10,6 +10,8 @@ namespace Valve.VR.InteractionSystem
     {
         public bool flying;
         public bool flaming;
+        private bool enableFire;
+        private bool enabledFire;
         
         //Not activly using these but may still want them
         public GameObject Head;
@@ -19,12 +21,16 @@ namespace Valve.VR.InteractionSystem
         public Rigidbody Whole;
         private Vector3 prevAngle;
 
+        public GameObject fire;
 
         // Start is called before the first frame update
         void Start()
         {
             flying = false;
             flaming = false;
+            enabledFire = false;
+            enableFire = false;
+            fire.SetActive(false);
         }
 
         // Update is called once per frame
@@ -34,6 +40,18 @@ namespace Valve.VR.InteractionSystem
             {
                 prevAngle = transform.eulerAngles;
                 transform.LookAt(transform.position + Whole.velocity);
+            }
+
+            if (flaming && !enabledFire)
+            {
+                enableFire = true;
+                enabledFire = true;
+            }
+
+            if (enableFire)
+            {
+                fire.SetActive(true);
+                enableFire = false;
             }
         }
         
@@ -51,6 +69,10 @@ namespace Valve.VR.InteractionSystem
                 Whole.useGravity = false;
                 Whole.isKinematic = true;
                 
+            }
+            if (other.gameObject.CompareTag("Flamable"))
+            {
+                other.gameObject.SetActive(false);
             }
         }
     }
