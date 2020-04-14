@@ -8,6 +8,7 @@ public class Tier : MonoBehaviour
 {
     public bool IsSolved = false;
     public bool IsBase = false;
+    public Vector3 solvedOffset = new Vector3(0.0f, 0.1f, 0.0f);
 
     private Vector3 StartPosition;
     private Vector3 SolvedPosition;
@@ -28,6 +29,17 @@ public class Tier : MonoBehaviour
                 return 0f;
 
             return Outer.TierStep + Outer.LowerTierHeight;
+        }
+    }
+
+    public Vector3 SolvedOffsetComputed
+    {
+        get
+        {
+            if (Outer == null)
+                return solvedOffset;
+
+            return solvedOffset + Outer.solvedOffset;
         }
     }
 
@@ -64,7 +76,7 @@ public class Tier : MonoBehaviour
     {
         if (IsSolved)
         {
-            TargetPosition = SolvedPosition;
+            TargetPosition = SolvedPosition + SolvedOffsetComputed;
             
             if (Outer != null)
                 SetRotation(Outer.transform.rotation);

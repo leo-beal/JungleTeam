@@ -16,6 +16,7 @@ public class Flicker : MonoBehaviour
     void Start()
     {
         lt = GetComponent<Light>();
+        
         if (lt != null)
             lt.enabled = this.enabled;
     }
@@ -34,11 +35,11 @@ public class Flicker : MonoBehaviour
 
     void Update()
     {
-        if (lt == null)
-            return;
-
         float t = Mathf.PingPong(Time.time, duration) / duration;
-        lt.color = Color.Lerp(color0, color1, t);
-        lt.intensity = Intensity;
+        if (lt != null)
+        {
+            lt.color = Color.Lerp(color0, color1, t);
+            lt.intensity = Intensity;
+        }
     }
 }
