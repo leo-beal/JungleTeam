@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 40487592104532e43bfabeca4a81b59e
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: aztec_maze_cull01
+    100004: aztec_maze_cull02
+    100006: aztec_maze_cull03
+    100008: aztec_maze_cull04
+    100010: aztec_maze_cull06
+    100012: aztec_maze_cull07
+    100014: aztec_maze_cull08
+    100016: aztec_maze_cull09
+    100018: aztec_maze_cull10
+    100020: maze_aztec_chest_location_001
+    100022: maze_aztec_chest_location_002
+    100024: maze_aztec_chest_location_003
+    100026: maze_aztec_chest_location_004
+    100028: maze_aztec_chest_location_005
+    100030: maze_aztec_chest_location_006
+    100032: maze_aztec_chest_location_007
+    100034: maze_aztec_chest_location_008
+    100036: maze_aztec_chest_location_009
+    100038: maze_aztec_chest_location_010
+    100040: maze_aztec_chest_location_011
+    400000: //RootNode
+    400002: aztec_maze_cull01
+    400004: aztec_maze_cull02
+    400006: aztec_maze_cull03
+    400008: aztec_maze_cull04
+    400010: aztec_maze_cull06
+    400012: aztec_maze_cull07
+    400014: aztec_maze_cull08
+    400016: aztec_maze_cull09
+    400018: aztec_maze_cull10
+    400020: maze_aztec_chest_location_001
+    400022: maze_aztec_chest_location_002
+    400024: maze_aztec_chest_location_003
+    400026: maze_aztec_chest_location_004
+    400028: maze_aztec_chest_location_005
+    400030: maze_aztec_chest_location_006
+    400032: maze_aztec_chest_location_007
+    400034: maze_aztec_chest_location_008
+    400036: maze_aztec_chest_location_009
+    400038: maze_aztec_chest_location_010
+    400040: maze_aztec_chest_location_011
+    2300000: aztec_maze_cull01
+    2300002: aztec_maze_cull02
+    2300004: aztec_maze_cull03
+    2300006: aztec_maze_cull04
+    2300008: aztec_maze_cull06
+    2300010: aztec_maze_cull07
+    2300012: aztec_maze_cull08
+    2300014: aztec_maze_cull09
+    2300016: aztec_maze_cull10
+    3300000: aztec_maze_cull01
+    3300002: aztec_maze_cull02
+    3300004: aztec_maze_cull03
+    3300006: aztec_maze_cull04
+    3300008: aztec_maze_cull06
+    3300010: aztec_maze_cull07
+    3300012: aztec_maze_cull08
+    3300014: aztec_maze_cull09
+    3300016: aztec_maze_cull10
+    4300000: aztec_maze_cull10
+    4300002: aztec_maze_cull09
+    4300004: aztec_maze_cull08
+    4300006: aztec_maze_cull07
+    4300008: aztec_maze_cull06
+    4300010: aztec_maze_cull04
+    4300012: aztec_maze_cull03
+    4300014: aztec_maze_cull02
+    4300016: aztec_maze_cull01
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
